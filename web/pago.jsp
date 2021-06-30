@@ -13,7 +13,7 @@
     <body>       
         <div class="col-mb-3" style="margin-left:500px;margin-top: 5px; width: 600px">                  
                     <div class="card">
-                        <div class="card-header">
+                        <div class="card-header text-center">
                             Realizar Pago de Productos
                         </div>
                         <div class="card-body">

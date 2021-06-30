@@ -22,7 +22,7 @@
         
         
         <li class="nav-item">
-          <a class="nav-link active" href="Controlador?accion=home" tabindex="-1" aria-disabled="true">+ Compras</a>         
+          <a class="nav-link active" href="Controlador?accion=home" tabindex="-1" aria-disabled="true">Inicio</a>         
            
         </li>
         
@@ -53,7 +53,7 @@
             <div class="row">             
                 <div class="col-lg-9">                 
                     <table class="table table-responsive">
-                        <thead class="table-primary">
+                        <thead class="table-danger">
                             <tr class="text-center">
                                 <th>Item</th>                               
                                 <th>Nombre</th>
@@ -92,8 +92,8 @@
                 </div>
                 <div class="col-lg-3">                  
                     <div class="card">
-                        <div class="card-header">
-                            Generar Compra
+                        <div class="card-header text-center" style="background: lightcoral">
+                            <h5>Generar Compra</h5>
                         </div>
                         <div class="card-body">
                             <label>Subtotal:</label>
@@ -105,8 +105,8 @@
                             <label>Total a Pagar:</label>
                             <a class="form-control text-center">S/ ${totalpago}0</a>
                         </div>
-                        <div class="card-footer">
-                            <a href="Controlador?accion=Pasadedatoscliente" class="btn btn-warning btn-block">Pagar</a>                            
+                        <div class="card-footer text-center">
+                            <a href="Controlador?accion=Pasadedatoscliente" style="width:200px" class="btn btn-danger" >Pagar</a>                            
                         </div>
                     </div>
                 </div>
