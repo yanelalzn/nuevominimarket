@@ -3,6 +3,7 @@ package Controlador;
 
 import Implements.CategoriaImpl;
 import Implements.ProductoImpl;
+import Implements.VentaImpl;
 import Servicios.ClienteService;
 import Servicios.ProductoService;
 import Usuario.Empleado;
@@ -19,8 +20,13 @@ import javax.servlet.http.HttpServletResponse;
 import modelo.Categoria;
 import modelo.Cliente;
 import modelo.Producto;
+import modelo.Venta;
 
 public class ControladorEmp extends HttpServlet {
+    
+    //venta
+    VentaImpl ventaimpl = new VentaImpl();
+    List<Venta> venta = new ArrayList<>();
     
     //productos
     int id=0;
@@ -51,6 +57,7 @@ public class ControladorEmp extends HttpServlet {
         
         producto=pimpl.listarproductos();
         categoria=combo.listarcategorias();
+        venta=ventaimpl.listarventa();
         switch (accion) {         
                               
             case "ListarCliente": 
@@ -60,7 +67,19 @@ public class ControladorEmp extends HttpServlet {
                 int id= Integer.parseInt(request.getParameter("id"));
                 cli.eliminar(id);
                 request.getRequestDispatcher("listarcliente.jsp").forward(request, response);
-                break;  
+                break;
+            case "BuscarEmpleado":                
+                String le = request.getParameter("txtbuscar2");
+                List<Empleado> lisemp = ventaimpl.BuscarEmpleado(le);
+                request.setAttribute("datosemp", lisemp); 
+                request.getRequestDispatcher("buscarempleado.jsp").forward(request, response);
+                break;
+            case "BuscarEmp":
+                String dat = request.getParameter("txtbuscar1");
+                List<Venta> lis = ventaimpl.Buscar(dat);
+                request.setAttribute("datosventa", lis); 
+                request.getRequestDispatcher("buscaventa.jsp").forward(request, response);
+                break;
             case "Buscar":
                 String dato = request.getParameter("txtbuscar");
                 List<Cliente> lista  = busca.Buscar(dato);
@@ -96,7 +115,27 @@ public class ControladorEmp extends HttpServlet {
                 proservice.addproducto(descripcion, img, nombre, precio, stock, categ);
                 request.setAttribute("producto2", producto);
                 request.getRequestDispatcher("productos.jsp").forward(request, response);
-                break;                
+                break;  
+            case "listaremp":    
+                request.getRequestDispatcher("listarempleado.jsp").forward(request, response);
+                break;
+                
+            case "listarventa":    
+                request.setAttribute("venta", venta); 
+                request.getRequestDispatcher("lventa.jsp").forward(request, response);
+                break; 
+                
+            case "Generarventa":   
+                
+                request.getRequestDispatcher("GenerarVenta.jsp").forward(request, response);
+                break;
+                
+            case "BuscarCliente":
+                String dato23 = request.getParameter("codigocliente");
+                List<Cliente> lista23  = busca.Buscar(dato23);
+                request.setAttribute("datos", lista23); 
+                request.getRequestDispatcher("GenerarVenta.jsp").forward(request, response);
+                break;
             default:         
                 
                 request.setAttribute("producto1", producto);                 

@@ -88,8 +88,7 @@
                             
                         </div>
                         <div class="card-footer">
-                            <a href="ControladorEmp?accion=RegistrarProducto" class="btn btn-dark btn-block">Registrar</a>
-                            <a href="#" class="btn btn-outline-dark btn-block">Editar</a>
+                            <a href="ControladorEmp?accion=RegistrarProducto" class="btn btn-dark btn-block">Registrar</a>                            
                         </div>
                     </div>
                            

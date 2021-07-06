@@ -19,9 +19,9 @@
 				<center>
                                     <form action="ValidarUsuario" method="post">					
 					<p>Username</p>
-					<input type="text" name="txtuser" placeholder="Enter your Username">
+                                        <input required  minlength="4" maxlength="9" type="text" name="txtuser" placeholder="Enter your Username">
 					<p>Password</p>
-					<input type="password" name="txtpass" placeholder="********">
+                                        <input required  minlength="4" maxlength="6" type="password" name="txtpass" placeholder="********">
 					<br>
 					<input type="submit" name="accion" value="Ingresar">
 					<br>		

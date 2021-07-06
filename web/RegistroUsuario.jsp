@@ -16,7 +16,7 @@
                 <img src="img/bg.svg">
             </div>
             <div class="login-content">
-                <form action="Servicios">                    
+                <form id="form" action="Servicios">                    
                     <br>
                     <div class="input-div one">
                         <div class="i">
@@ -24,7 +24,7 @@
                         </div>
                         <div class="div">
                             <h5>Nombre</h5>
-                            <input type="text" name="txtname"class="input">
+                            <input  onkeypress="return sololetras(event)" required  minlength="3" maxlength="9" type="text" name="txtname"class="input">
                         </div>
                     </div>
                     <div class="input-div one">
@@ -33,7 +33,7 @@
                         </div>
                         <div class="div">
                             <h5>Apellidos</h5>
-                            <input type="text" name="txtape" class="input">
+                            <input onkeypress="return sololetras(event)" required minlength="3" maxlength="10" type="text" name="txtape" class="input">
                         </div>
                     </div>
                     <div class="input-div one">
@@ -42,7 +42,7 @@
                         </div>
                         <div class="div">
                             <h5>DNI</h5>
-                            <input type="text" name="txtdni" class="input">
+                            <input onkeypress="return solonumeros(event)" required  minlength="9" maxlength="9" type="text" name="txtdni" class="input">
                         </div>
                     </div>
                     <div class="input-div one">
@@ -51,7 +51,7 @@
                         </div>
                         <div class="div">
                             <h5>Username</h5>
-                            <input type="text" name="txtuser"class="input">
+                            <input  onkeypress="return sololetras(event)" required  minlength="4" maxlength="9" type="text" name="txtuser"class="input">
                         </div>
                     </div>
                     <div class="input-div pass">
@@ -60,7 +60,7 @@
                         </div>
                         <div class="div">
                             <h5>Password</h5>
-                            <input type="password" name="txtpass" class="input">
+                            <input onkeypress="return solonumeros(event)" required minlength="4" maxlength="6" type="password" name="txtpass" class="input">
                         </div>
                     </div>
                     
@@ -70,7 +70,7 @@
                         </div>
                         <div class="div">
                             <h5>Direccion</h5>
-                            <input type="text" name="txtdirec" class="input">
+                            <input required type="text" name="txtdirec" class="input">
                         </div>
                     </div>
                     
@@ -80,7 +80,7 @@
                         </div>
                         <div class="div">
                             <h5>Email</h5>
-                            <input type="text" name="txtemail" class="input">
+                            <input onkeydown="validarEmail()" required type="text" id="email" name="txtemail" class="input">
                         </div>
                     </div>
                     
@@ -90,7 +90,7 @@
                         </div>
                         <div class="div">
                             <h5>Telefono</h5>
-                            <input type="text" name="txtef" class="input">
+                            <input onkeypress="return solonumeros(event)" required type="text" name="txtef" class="input">
                         </div>
                     </div>
                     <script>
@@ -112,11 +112,13 @@
                                  });
     }
                     </script>
-                    <input id="pagar" onclick="registro();" type="submit" class="btn" name="accion" value="Guardar">
+                    <input id="pagar"  type="submit" class="btn" name="accion" value="Guardar">
                     <a href="login.jsp">Regresar</a>
                 </form>
             </div>
         </div>
+        
+        <script src="js/Validar.js" type="text/javascript"></script>
         <script type="text/javascript" src="js/Registro_Cliente.js"></script>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>

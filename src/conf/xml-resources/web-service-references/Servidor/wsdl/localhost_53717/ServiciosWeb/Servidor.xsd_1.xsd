@@ -8,6 +8,10 @@
 
 <xs:element name="EliminarResponse" type="tns:EliminarResponse"/>
 
+<xs:element name="ListadoEmpleado" type="tns:ListadoEmpleado"/>
+
+<xs:element name="ListadoEmpleadoResponse" type="tns:ListadoEmpleadoResponse"/>
+
 <xs:element name="add" type="tns:add"/>
 
 <xs:element name="addResponse" type="tns:addResponse"/>
@@ -52,18 +56,6 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="listarid">
-<xs:sequence>
-<xs:element name="id" type="xs:int"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="listaridResponse">
-<xs:sequence>
-<xs:element name="return" type="tns:cliente" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
 <xs:complexType name="Eliminar">
 <xs:sequence>
 <xs:element name="id" type="xs:int"/>
@@ -71,6 +63,18 @@
 </xs:complexType>
 
 <xs:complexType name="EliminarResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cliente" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listarid">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listaridResponse">
 <xs:sequence>
 <xs:element name="return" type="tns:cliente" minOccurs="0"/>
 </xs:sequence>
@@ -142,6 +146,29 @@
 <xs:complexType name="EditarCResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ListadoEmpleado">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="ListadoEmpleadoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:empleadoservice" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="empleadoservice">
+<xs:sequence>
+<xs:element name="ape" type="xs:string" minOccurs="0"/>
+<xs:element name="distrito" type="xs:string" minOccurs="0"/>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="id_empleado20" type="xs:int"/>
+<xs:element name="nom" type="xs:string" minOccurs="0"/>
+<xs:element name="rol" type="xs:string" minOccurs="0"/>
+<xs:element name="telefono" type="xs:string" minOccurs="0"/>
+<xs:element name="usuario_emp" type="xs:string" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 </xs:schema>

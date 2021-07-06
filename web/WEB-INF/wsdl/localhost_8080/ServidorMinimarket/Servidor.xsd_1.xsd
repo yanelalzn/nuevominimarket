@@ -24,6 +24,10 @@
 
 <xs:element name="listarcategoriaResponse" type="tns:listarcategoriaResponse"/>
 
+<xs:element name="listaremp" type="tns:listaremp"/>
+
+<xs:element name="listarempResponse" type="tns:listarempResponse"/>
+
 <xs:element name="listarid" type="tns:listarid"/>
 
 <xs:element name="listaridResponse" type="tns:listaridResponse"/>
@@ -109,6 +113,29 @@
 <xs:sequence>
 <xs:element name="id_categoria" type="xs:int"/>
 <xs:element name="nombre" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listaremp">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="listarempResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:empleadoservice" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="empleadoservice">
+<xs:sequence>
+<xs:element name="ape" type="xs:string" minOccurs="0"/>
+<xs:element name="distrito" type="xs:string" minOccurs="0"/>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="id_empleado20" type="xs:int"/>
+<xs:element name="nom" type="xs:string" minOccurs="0"/>
+<xs:element name="rol" type="xs:string" minOccurs="0"/>
+<xs:element name="telefono" type="xs:string" minOccurs="0"/>
+<xs:element name="usuario_emp" type="xs:string" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 

@@ -25,11 +25,15 @@
             <a class="nav-link active" href="ControladorEmp?accion=Producto"> Productos</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href="ControladorEmp?accion=Empleado">Empleado</a>
+            <a class="nav-link active" href="ControladorEmp?accion=listaremp">Empleado</a>
         </li>
         
         <li class="nav-item">
-            <a class="nav-link active" href="#">Config</a>
+            <a class="nav-link active" href="ControladorEmp?accion=listarventa">Venta</a>
+        </li>
+        
+        <li class="nav-item">
+            <a class="nav-link active" href="ControladorEmp?accion=Generarventa">GenerarVenta</a>
         </li>
         </ul>
         
