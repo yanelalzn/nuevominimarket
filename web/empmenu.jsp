@@ -51,7 +51,7 @@
        </form>--%>
         
         
-        <div class="btn-group dropstart" style="margin-left: 870px;">
+        <div class="btn-group dropstart" style="margin-left: 7px;">
         <button  style="border: none;"class="btn btn-outline-light   dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="fas fa-window-close"></i>
         </button>

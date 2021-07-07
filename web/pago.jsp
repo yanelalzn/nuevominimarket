@@ -51,15 +51,15 @@
                             <option value="">BCP</option>
                             </select>
                             <label>Numero de Tarjeta</label>
-                            <input type="text"  value="" name="txtcanti" class="form-control text-center">
+                            <input  required maxlength="16" minlength="16" type="text"  value="" name="txtcanti" class="form-control text-center">
                             <div class="row g-3">
                             <div class="col-md-6">
-                                <label for="inputPassword4" class="form-label">Fecha de Expiracion</label>
-                                <input type="text"  class="form-control" id="inputPassword4">
+                                <label for="inputPassword4"  class="form-label">Fecha de Expiracion</label>
+                                <input required  maxlength="4" minlength="4"type="text"  class="form-control" id="inputPassword4">
                             </div>
                             <div class="col-md-6">
                                 <label for="inputPassword4" class="form-label">CVC</label>
-                                <input type="text" class="form-control" id="inputPassword4">
+                                <input required maxlength="3" minlength="3"type="text" class="form-control" id="inputPassword4">
                             </div>    
                             </div>
                             

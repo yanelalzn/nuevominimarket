@@ -42,7 +42,7 @@
                         </div>
                         <div class="div">
                             <h5>DNI</h5>
-                            <input onkeypress="return solonumeros(event)" required  minlength="9" maxlength="9" type="text" name="txtdni" class="input">
+                            <input onkeypress="return solonumeros(event)" required  minlength="8" maxlength="8" type="text" name="txtdni" class="input">
                         </div>
                     </div>
                     <div class="input-div one">
