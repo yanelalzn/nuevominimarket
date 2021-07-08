@@ -4,6 +4,7 @@ package Controlador;
 import Implements.CategoriaImpl;
 import Implements.ProductoImpl;
 import Implements.VentaImpl;
+import Metodos.ClienteVenta;
 import Servicios.ClienteService;
 import Servicios.ProductoService;
 import Usuario.Empleado;
@@ -24,6 +25,8 @@ import modelo.Venta;
 
 public class ControladorEmp extends HttpServlet {
     
+    //buscarcliente en venta
+    ClienteVenta cliv = new ClienteVenta();
     //venta
     VentaImpl ventaimpl = new VentaImpl();
     List<Venta> venta = new ArrayList<>();
@@ -34,7 +37,8 @@ public class ControladorEmp extends HttpServlet {
     ProductoImpl pimpl = new ProductoImpl();
     List<Producto> producto = new ArrayList<>();
     
-    
+    //Cliente
+    Cliente c = new Cliente();
     
     List<Cliente> lista = new ArrayList<>();
     //listar cliente
@@ -130,12 +134,19 @@ public class ControladorEmp extends HttpServlet {
                 request.getRequestDispatcher("GenerarVenta.jsp").forward(request, response);
                 break;
                 
-            case "BuscarCliente":
-                String dato23 = request.getParameter("codigocliente");
-                List<Cliente> lista23  = busca.Buscar(dato23);
-                request.setAttribute("datos", lista23); 
-                request.getRequestDispatcher("GenerarVenta.jsp").forward(request, response);
-                break;
+            case "Venta":
+                String accion1 = request.getParameter("accion1");
+                switch(accion1){
+                    case "BuscarCliente":   
+                        String dni = request.getParameter("codigocliente");
+                        c.setNum_doc(dni);
+                        cliv.buscar(dni);
+                        request.setAttribute("clientes", c);
+                        request.getRequestDispatcher("GenerarVenta.jsp").forward(request, response);
+                    break;
+                    default:
+                        throw new AssertionError();
+                }                
             default:         
                 
                 request.setAttribute("producto1", producto);                 

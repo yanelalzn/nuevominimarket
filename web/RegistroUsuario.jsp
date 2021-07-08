@@ -60,7 +60,7 @@
                         </div>
                         <div class="div">
                             <h5>Password</h5>
-                            <input onkeypress="return solonumeros(event)" required minlength="4" maxlength="6" type="password" name="txtpass" class="input">
+                            <input  required minlength="4" maxlength="6" type="password" name="txtpass" class="input">
                         </div>
                     </div>
                     
@@ -90,7 +90,7 @@
                         </div>
                         <div class="div">
                             <h5>Telefono</h5>
-                            <input onkeypress="return solonumeros(event)" required type="text" name="txtef" class="input">
+                            <input onkeypress="return solonumeros(event)" minlength="9" maxlength="9" required type="text" name="txtef" class="input">
                         </div>
                     </div>
                     <script>

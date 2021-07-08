@@ -51,14 +51,7 @@
        </form>--%>
         
         
-        <div class="btn-group dropstart" style="margin-left: 7px;">
-        <button  style="border: none;"class="btn btn-outline-light   dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="fas fa-window-close"></i>
-        </button>
-        <div class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">        
-            <a class="dropdown-item" href="login.jsp">Salir</a>
-        </div>     
-        </div>
+        
         
         <%--
         <div class="dropdown me-3"  style="left: 850px; ">
@@ -72,7 +65,14 @@
         </div>
       </div>            
           --%>    
-       
+       <div class="btn-group dropstart" style="margin-left: 7px;">
+        <button  style="border: none;"class="btn btn-outline-light   dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-window-close"></i>
+        </button>
+        <div class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">        
+            <a class="dropdown-item" href="login.jsp">Salir</a>
+        </div>     
+        </div>
     
   </div>
 </nav>   
